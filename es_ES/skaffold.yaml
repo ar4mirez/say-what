@@ -10,3 +10,8 @@ deploy:
   kustomize:
     paths:
     - ./k8s
+test:
+- image: ar4mirez/say-what-es
+  structureTests:
+  - './structure-test/no-go-binary.yaml'
+  - './structure-test/compiled-binary.yaml'

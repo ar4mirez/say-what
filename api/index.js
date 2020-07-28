@@ -10,7 +10,7 @@ const services = {
 
 const i18n = async (req, res) => {
   try {
-    const url = `${services[req.params.lang]}/translate?word=${req.params}`
+    const url = `${services[req.params.lang]}/translate?word=${req.params.word}`
     const response = await fetch(url)
     const data = await response.json()
 

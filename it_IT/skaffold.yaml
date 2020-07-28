@@ -1,0 +1,12 @@
+apiVersion: skaffold/v2beta5
+kind: Config
+metadata:
+  name: it
+build:
+  artifacts:
+  - image: ar4mirez/say-what-it
+  local: {}
+deploy:
+  kustomize:
+    paths:
+    - ./k8s
