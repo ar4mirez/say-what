@@ -1,0 +1,17 @@
+@startuml
+
+Actor -> API: Hi:eng
+
+alt en_US case
+    API --> it_service: /translate?word=hi
+end
+
+alt fr_FR case
+    API --> fr_service: /translate?word=hi
+end
+
+alt es_ES case
+    API --> es_service: /translate?word=hi
+end
+
+@enduml
