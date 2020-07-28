@@ -11,9 +11,7 @@ import (
 
 // StrResponse ...
 type StrResponse struct {
-	Status int         `json:"status"`
-	Data   interface{} `json:"data"`
-	Error  interface{} `json:"error"`
+	Word interface{} `json:"word"`
 }
 
 func main() {
@@ -42,9 +40,7 @@ func Handler(c echo.Context) error {
 	translatedWord := Translate(word)
 
 	strResponse := StrResponse{}
-	strResponse.Status = http.StatusOK
-	strResponse.Data = translatedWord
-	strResponse.Error = nil
+	strResponse.Word = translatedWord
 
 	return c.JSON(http.StatusOK, &strResponse)
 }
