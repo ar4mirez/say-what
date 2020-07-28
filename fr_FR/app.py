@@ -12,7 +12,7 @@ def translate():
     word = request.args['word']
     _word_translate = fr_FR.en_to_fr(word)
 
-    return {"fr_FR": _word_translate}, http.HTTPStatus.OK
+    return {"word": _word_translate}, http.HTTPStatus.OK
 
 
 if __name__ == '__main__':
