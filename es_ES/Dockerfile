@@ -28,6 +28,6 @@ ENV PORT=8001
 
 RUN chmod +x ./say-what
 
-EXPOSE ${PORT}
+EXPOSE $PORT
 
 ENTRYPOINT [ "./say-what" ]

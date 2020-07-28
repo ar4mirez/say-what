@@ -59,6 +59,8 @@ func Translate(word string) string {
 		response = "Hola"
 	case "HELLO":
 		response = "Hola"
+	case "BYE":
+		response = "Adios"
 	default:
 		response = "No implementado"
 	}

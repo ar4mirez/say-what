@@ -18,6 +18,11 @@ func TestTranslate(t *testing.T) {
 		t.Fatalf("Fail TestTranslate expected value 'Hola' - returned %v", response)
 	}
 
+	response = srv.Translate("bye")
+	if response != "Adios" {
+		t.Fatalf("Fail TestTranslate expected value 'Adios' - returned %v", response)
+	}
+
 	response = srv.Translate("anyword")
 	if response != "No implementado" {
 		t.Fatalf("Fail TestTranslate expected value 'No implementado' - returned %v", response)
