@@ -1,0 +1,16 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: develop
+namePrefix: api-
+
+commonLabels:
+  app: api
+  env: develop
+
+bases:
+- ../../manifests/base/http
+
+images:
+- name: http
+  newName: ar4mirez/say-what-api
