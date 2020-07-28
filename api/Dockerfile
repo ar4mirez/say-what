@@ -1,8 +1,11 @@
-FROM node:alpine3.12 as build
-RUN mkdir -p /build
-WORKDIR /build
-COPY . /build
-RUN npm i --production
+FROM node:alpine3.12
+
+RUN mkdir -p /app
+WORKDIR /app
+
+COPY . /app
+
+RUN npm i
 
 ENV PORT=3000
 EXPOSE ${PORT}

@@ -7,10 +7,10 @@ resources:
 
 configMapGenerator:
 - name: configmap
-  files:
-  - configmap.conf
+  envs:
+  - configmap.env
 
 secretGenerator:
 - name: secrets
-  files:
+  envs:
   - secrets.env

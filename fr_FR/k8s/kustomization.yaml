@@ -2,10 +2,10 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 namespace: develop
-namePrefix: api-
+namePrefix: fr-
 
 commonLabels:
-  app: api
+  app: fr
   env: develop
 
 bases:
@@ -13,10 +13,4 @@ bases:
 
 images:
 - name: http
-  newName: ar4mirez/say-what-api
-
-configMapGenerator:
-- name: configmap
-  behavior: merge
-  envs:
-  - configmap.env
+  newName: ar4mirez/say-what-fr
