@@ -1,0 +1,6 @@
+schemaVersion: 2.0.0
+
+fileExistenceTests:
+- name: 'Binary exists'
+  path: '/root/say-what'
+  shouldExist: true

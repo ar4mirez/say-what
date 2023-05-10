@@ -24,7 +24,7 @@ WORKDIR /root/
 
 COPY --from=builder /go/src/github.com/ar4mirez/say-what .
 
-ENV PORT=8001
+ENV PORT=3000
 
 RUN chmod +x ./say-what
 
